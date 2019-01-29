@@ -1,5 +1,6 @@
 # Halite3
-Chessjawa's Halite 3 Bot ~ Rank 30 Pending Verification - 31st before Finals
+Chessjawa's Halite 3 Bot ~ Finished at rank 25
+
 If you are here for good quality code then you should turn around. There is nothing in this bot that one should try to duplicate.
 This is the first time I have competed in such a manner, and while I performed decently my bot was significantly under developed compared to the others.
 
@@ -28,7 +29,7 @@ The very early versions of my bot gridlocked because I was using Naive Navigate,
 
                             Mining
 That leads nicely into how I decided if I wanted a ship to mine or not. I ran a couple of checks, but it basically boiled down to comparing the halite on their space to a variable.
-The variable "mine_when_over" was simply a value based on average halite on the board that was used to check if you should mine. It is set lower than avg halite because it worked - More specifically was because once the halite on the map becomes roughly level, mining when at or close to average becomes very scarce especially if there was a large deposit increasing the average. 
+The variable "mine_when_over" (0.65 * average halite on 4p and 0.7 * average halite on 2p) was simply a value based on average halite on the board that was used to check if you should mine. It is set lower than avg halite because it worked - More specifically was because once the halite on the map becomes roughly level, mining when at or close to average becomes very scarce especially if there was a large deposit increasing the average. 
 The other check that I ran was making sure that a adajcent space wasn't a ton better. I wouldn't mine on a space if the space next to it was twice as large. I had tested 0.571 as the multiplier because that was the result of mining twice on the current space vs moving once and mining on the adajcent space, but it was not as useful.
 
                           Target Selection
